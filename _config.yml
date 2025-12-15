@@ -1,1 +1,24 @@
 
+# Site settings
+title: "★ PULSAR ★"
+description: "창작 · 코드 · 아카이브"
+url: ""  # GitHub Pages 배포 후 수정
+baseurl: "/Per-Aspera-Ad-Astra"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Collections (작업물)
+collections:
+  works:
+    output: true
+    permalink: /works/:slug/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "works"
+    values:
+      layout: "work"
