@@ -33,9 +33,7 @@ layout: default
         <span class="col-category cat-{{ work.category }}">[{{ work.category }}]</span>
         <a href="{{ site.baseurl }}{{ work.url }}" class="col-title">
           {{ work.title }}
-          {% assign now = 'now' | date: '%s' | minus: 604800 %}
-          {% assign post_date = work.date | date: '%s' %}
-          {% if post_date > now %}<span class="new-badge">NEW</span>{% endif %}
+          {% if forloop.first %}<span class="new-badge">NEW</span>{% endif %}
         </a>
         <span class="col-date">{{ work.date | date: "%m/%d" }}</span>
         <span class="col-price {% if work.price == '무료' %}free{% else %}paid{% endif %}">{{ work.price }}</span>
@@ -62,4 +60,3 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 </script>
-
