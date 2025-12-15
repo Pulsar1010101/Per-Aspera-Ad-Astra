@@ -34,7 +34,7 @@
 
 body {
   font-family: var(--font-main);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.6;
   color: var(--text-primary);
   background-color: var(--bg-dark);
@@ -54,7 +54,7 @@ a:hover {
 
 /* ===== 컨테이너 ===== */
 .container {
-  max-width: 700px;
+  max-width: 750px;
   margin: 30px auto;
   background: var(--bg-container);
   border: 3px solid var(--border-main);
@@ -73,7 +73,7 @@ a:hover {
 
 .star-deco {
   color: var(--accent-pink-bright);
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .star-deco.left {
@@ -92,7 +92,7 @@ a:hover {
 
 .site-title {
   color: var(--accent-pink);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   margin: 0;
 }
@@ -100,7 +100,7 @@ a:hover {
 .site-subtitle {
   background: var(--bg-header);
   color: var(--text-secondary);
-  font-size: 10px;
+  font-size: 13px;
   padding-bottom: 15px;
   margin: 0;
 }
@@ -108,7 +108,7 @@ a:hover {
 /* ===== 네비게이션 ===== */
 .main-nav {
   background: var(--bg-nav);
-  padding: 8px 0;
+  padding: 10px 0;
   display: flex;
   justify-content: center;
   gap: 50px;
@@ -116,6 +116,7 @@ a:hover {
 
 .main-nav a {
   color: var(--accent-blue);
+  font-size: 14px;
 }
 
 .main-nav a::before {
@@ -145,7 +146,7 @@ a:hover {
 
 .box-title {
   color: var(--accent-yellow);
-  font-size: 11px;
+  font-size: 13px;
   text-align: center;
   margin-bottom: 12px;
 }
@@ -153,7 +154,7 @@ a:hover {
 /* ===== 홈 레이아웃 ===== */
 .home-layout {
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: 200px 1fr;
   gap: 15px;
 }
 
@@ -171,12 +172,14 @@ a:hover {
 .profile-info dt {
   color: var(--text-secondary);
   display: inline;
+  font-size: 13px;
 }
 
 .profile-info dd {
   display: inline;
   margin-left: 5px;
   margin-bottom: 5px;
+  font-size: 13px;
 }
 
 .profile-info dd::after {
@@ -187,7 +190,7 @@ a:hover {
 
 .profile-desc {
   color: var(--text-primary);
-  font-size: 11px;
+  font-size: 13px;
 }
 
 /* 링크 */
@@ -196,7 +199,8 @@ a:hover {
 }
 
 .link-list li {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  font-size: 13px;
 }
 
 /* 업데이트 */
@@ -206,21 +210,22 @@ a:hover {
 }
 
 .update-list li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   gap: 10px;
+  font-size: 13px;
 }
 
 .update-list .date {
   color: var(--text-date);
-  font-size: 10px;
-  min-width: 70px;
+  font-size: 13px;
+  min-width: 80px;
 }
 
 .update-notice {
   color: var(--text-secondary);
-  font-size: 11px;
+  font-size: 13px;
   text-align: center;
 }
 
@@ -228,8 +233,8 @@ a:hover {
 .new-badge {
   background: #ff3366;
   color: #fff;
-  font-size: 9px;
-  padding: 1px 5px;
+  font-size: 11px;
+  padding: 2px 6px;
   margin-left: 5px;
 }
 
@@ -238,7 +243,7 @@ a:hover {
   background: var(--bg-inner);
   border: 1px solid var(--border-main);
   text-align: center;
-  max-width: 150px;
+  max-width: 160px;
 }
 
 .counter-box .box-title {
@@ -252,13 +257,13 @@ a:hover {
 
 .page-title {
   color: var(--accent-yellow);
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 5px;
 }
 
 .page-subtitle {
   color: var(--text-secondary);
-  font-size: 10px;
+  font-size: 13px;
   margin-bottom: 20px;
 }
 
@@ -273,7 +278,7 @@ a:hover {
   border: none;
   color: var(--accent-blue);
   font-family: var(--font-main);
-  font-size: 11px;
+  font-size: 13px;
   cursor: pointer;
   margin-right: 10px;
 }
@@ -289,12 +294,12 @@ a:hover {
 
 .table-header {
   background: var(--bg-header);
-  padding: 8px 15px;
+  padding: 10px 15px;
   display: grid;
-  grid-template-columns: 40px 70px 1fr 50px 60px;
+  grid-template-columns: 45px 80px 1fr 55px 70px;
   gap: 10px;
   color: var(--text-secondary);
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .works-list {
@@ -304,13 +309,13 @@ a:hover {
 }
 
 .work-item {
-  padding: 10px 15px;
+  padding: 12px 15px;
   display: grid;
-  grid-template-columns: 40px 70px 1fr 50px 60px;
+  grid-template-columns: 45px 80px 1fr 55px 70px;
   gap: 10px;
   align-items: center;
   border-bottom: 1px solid var(--border-light);
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .work-item:last-child {
@@ -322,7 +327,7 @@ a:hover {
 }
 
 .col-category {
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .cat-글, [class*="cat-글"] { color: var(--accent-pink); }
@@ -349,7 +354,7 @@ a:hover {
 
 .breadcrumb {
   color: var(--text-date);
-  font-size: 10px;
+  font-size: 13px;
   margin-bottom: 15px;
 }
 
@@ -361,7 +366,7 @@ a:hover {
 
 .work-title {
   color: var(--accent-yellow);
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
@@ -369,23 +374,24 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 15px;
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .category-tag {
   background: #2a4a4a;
-  padding: 2px 8px;
+  padding: 3px 10px;
   border-radius: 2px;
 }
 
 .work-body {
   margin-bottom: 20px;
   line-height: 1.8;
+  font-size: 14px;
 }
 
 .work-body h2 {
   color: var(--accent-yellow);
-  font-size: 12px;
+  font-size: 14px;
   margin: 20px 0 10px;
 }
 
@@ -406,10 +412,10 @@ a:hover {
 }
 
 .btn {
-  padding: 8px 20px;
+  padding: 10px 22px;
   border-radius: 3px;
   font-family: var(--font-main);
-  font-size: 12px;
+  font-size: 14px;
   text-decoration: none;
 }
 
@@ -430,9 +436,9 @@ a:hover {
   display: flex;
   justify-content: space-between;
   background: var(--bg-dark);
-  padding: 10px 15px;
+  padding: 12px 15px;
   margin-top: 15px;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .work-nav .disabled {
@@ -447,9 +453,9 @@ a:hover {
 .guestbook-notice {
   background: var(--bg-box);
   border: 1px solid var(--border-box);
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 15px;
-  font-size: 10px;
+  font-size: 13px;
   color: var(--text-secondary);
 }
 
@@ -463,10 +469,9 @@ a:hover {
   text-align: center;
   padding: 15px;
   color: var(--text-muted);
-  font-size: 10px;
+  font-size: 13px;
 }
 
 .site-footer p {
   margin-bottom: 5px;
 }
-
