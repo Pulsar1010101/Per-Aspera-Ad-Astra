@@ -1,1 +1,65 @@
+---
+layout: default
+---
+
+<div class="works-layout">
+  <h2 class="page-title">◆ WORKS ◆</h2>
+  <p class="page-subtitle">창작물 목록</p>
+  
+  <!-- 카테고리 필터 -->
+  <div class="category-filter">
+    <button class="filter-btn active" data-category="all">[ALL]</button>
+    <button class="filter-btn" data-category="글">[글]</button>
+    <button class="filter-btn" data-category="코드">[코드]</button>
+    <button class="filter-btn" data-category="게임">[게임]</button>
+    <button class="filter-btn" data-category="기타">[기타]</button>
+  </div>
+  
+  <!-- 작업물 테이블 -->
+  <div class="works-table">
+    <div class="table-header">
+      <span class="col-no">No.</span>
+      <span class="col-category">카테고리</span>
+      <span class="col-title">제목</span>
+      <span class="col-date">날짜</span>
+      <span class="col-price">가격</span>
+    </div>
+    
+    <ul class="works-list">
+      {% assign works_sorted = site.works | sort: 'date' | reverse %}
+      {% for work in works_sorted %}
+      <li class="work-item" data-category="{{ work.category }}">
+        <span class="col-no">{{ forloop.rindex | prepend: '00' | slice: -3, 3 }}</span>
+        <span class="col-category cat-{{ work.category }}">[{{ work.category }}]</span>
+        <a href="{{ site.baseurl }}{{ work.url }}" class="col-title">
+          {{ work.title }}
+          {% assign now = 'now' | date: '%s' | minus: 604800 %}
+          {% assign post_date = work.date | date: '%s' %}
+          {% if post_date > now %}<span class="new-badge">NEW</span>{% endif %}
+        </a>
+        <span class="col-date">{{ work.date | date: "%m/%d" }}</span>
+        <span class="col-price {% if work.price == '무료' %}free{% else %}paid{% endif %}">{{ work.price }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    const category = btn.dataset.category;
+    document.querySelectorAll('.work-item').forEach(item => {
+      if (category === 'all' || item.dataset.category === category) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
 
