@@ -2,7 +2,7 @@
 # Site settings
 title: "★ PULSAR ★"
 description: "창작 · 코드 · 아카이브"
-url: ""  # GitHub Pages 배포 후 수정
+url: "https://pulsar1010101.github.io"
 baseurl: "/Per-Aspera-Ad-Astra"
 
 # Build settings
