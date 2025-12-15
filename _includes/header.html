@@ -1,1 +1,15 @@
 
+<header class="site-header">
+  <div class="header-banner">
+    <span class="star-deco left">✦</span>
+    <h1 class="site-title">★ PULSAR ★</h1>
+    <span class="star-deco right">✦</span>
+  </div>
+  <p class="site-subtitle">- welcome to my homepage -</p>
+  
+  <nav class="main-nav">
+    <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">Home</a>
+    <a href="{{ site.baseurl }}/works/" class="{% if page.url contains '/works' %}active{% endif %}">Works</a>
+    <a href="{{ site.baseurl }}/guestbook/" class="{% if page.url == '/guestbook/' %}active{% endif %}">방명록</a>
+  </nav>
+</header>
