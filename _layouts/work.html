@@ -1,1 +1,70 @@
+---
+layout: default
+---
+
+<div class="work-detail">
+  <p class="breadcrumb">
+    <a href="{{ site.baseurl }}/works/">Works</a> > 상세
+  </p>
+  
+  <article class="work-content box">
+    <header class="work-header">
+      <h1 class="work-title">{{ page.title }}</h1>
+      <div class="work-meta">
+        <span class="category-tag cat-{{ page.category }}">{{ page.category }}</span>
+        <span class="date">{{ page.date | date: "%Y/%m/%d" }}</span>
+        <span class="price {% if page.price == '무료' %}free{% else %}paid{% endif %}">{{ page.price }}</span>
+      </div>
+    </header>
+    
+    <div class="work-body">
+      {{ content }}
+    </div>
+    
+    {% if page.download or page.external_link %}
+    <div class="work-buttons">
+      {% if page.download %}
+      <a href="{{ page.download }}" class="btn btn-download">↓ Download</a>
+      {% endif %}
+      {% if page.external_link %}
+      <a href="{{ page.external_link }}" class="btn btn-external" target="_blank">→ {{ page.external_label | default: "Link" }}</a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </article>
+  
+  <!-- 이전/다음 -->
+  <nav class="work-nav">
+    {% assign works_sorted = site.works | sort: 'date' %}
+    {% assign current_index = nil %}
+    {% for work in works_sorted %}
+      {% if work.url == page.url %}
+        {% assign current_index = forloop.index0 %}
+      {% endif %}
+    {% endfor %}
+    
+    {% if current_index %}
+      {% assign prev_index = current_index | minus: 1 %}
+      {% assign next_index = current_index | plus: 1 %}
+      
+      <div class="nav-prev">
+        {% if prev_index >= 0 %}
+          {% assign prev_work = works_sorted[prev_index] %}
+          <a href="{{ site.baseurl }}{{ prev_work.url }}">◀ 이전: {{ prev_work.title }}</a>
+        {% else %}
+          <span class="disabled">이전글 없음</span>
+        {% endif %}
+      </div>
+      
+      <div class="nav-next">
+        {% if next_index < works_sorted.size %}
+          {% assign next_work = works_sorted[next_index] %}
+          <a href="{{ site.baseurl }}{{ next_work.url }}">다음: {{ next_work.title }} ▶</a>
+        {% else %}
+          <span class="disabled">다음글 없음</span>
+        {% endif %}
+      </div>
+    {% endif %}
+  </nav>
+</div>
 
